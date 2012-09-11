@@ -68,7 +68,7 @@ google_sitemap_ping = True
 # an html file' method, then set the NAME of the file below.
 # Note that you do not need to download the file provided - just enter its name
 # here.
-google_site_verification = None
+google_site_verification = 'google0082d02ec857c8d7.html'
 
 # Default markup language for entry bodies (defaults to html).
 default_markup = 'html'
