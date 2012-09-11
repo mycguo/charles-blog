@@ -1,11 +1,11 @@
 # Name of the blog
-blog_name = 'My Blog'
+blog_name = 'Charles\'s Blog'
 
 # Your name (used for copyright info)
-author_name = 'the author'
+author_name = 'Charles Guo'
 
 # (Optional) slogan
-slogan = 'This is my blog'
+slogan = 'Keep Learning'
 
 # The hostname this site will primarially serve off (used for Atom feeds)
 host = 'localhost:8080'
@@ -31,6 +31,7 @@ post_path_format = '/%(year)d/%(month)02d/%(slug)s'
 # enough, you can edit themes/default/base.html instead.
 sidebars = [
   ('Blogroll', [
+    '<a href="http://charles-blog.appspot.com/">Charles Guo</a>',            
     '<a href="http://blog.notdot.net/">Nick Johnsonz</a>',
     '<a href="http://www.billkatz.com/">Bill Katz</a>',
     '<a href="http://www.codinghorror.com/blog/">Coding Horror</a>',
@@ -48,7 +49,8 @@ html_mime_type = "text/html; charset=utf-8"
 
 # To use disqus for comments, set this to the 'short name' of the disqus forum
 # created for the purpose.
-disqus_forum = None
+use_disqus = True
+disqus_forum = 'charles-blog'
 
 # Length (in words) of summaries, by default
 summary_length = 200
