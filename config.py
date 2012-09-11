@@ -8,7 +8,7 @@ author_name = 'Charles Guo'
 slogan = 'Keep Learning'
 
 # The hostname this site will primarially serve off (used for Atom feeds)
-host = 'localhost:8080'
+host = 'charles-blog.appspot.com'
 
 # Selects the theme to use. Theme names correspond to directories under
 # the 'themes' directory, containing templates and static content.
