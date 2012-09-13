@@ -232,7 +232,7 @@ input.button {
 }
 #header #header-image {
 	position: absolute;
-	background: url(../images/header-bloggart-watermark.png) top right no-repeat;
+	background: url(../images/header-image.gif) top right no-repeat;
 	width: 400px;
 	height: 300px;	
 	right: 10px; top: 0;	
