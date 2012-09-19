@@ -5,6 +5,7 @@
   {% block style %}
   <link rel="stylesheet" type="text/css" media="screen" href="{{config.url_prefix}}/static/{{config.theme}}/css/screen.css" />
   <link href="{{config.url_prefix}}/static/{{config.theme}}/css/pretty/prettify.css" type="text/css" rel="stylesheet" />
+  <link href="{{config.url_prefix}}/static/{{config.theme}}/css/pytagcloud.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="{{config.url_prefix}}/static/{{config.theme}}/css/pretty/prettify.js"></script>
   {% endblock %}
   {% if config.highlighting_style %}
@@ -61,6 +62,11 @@
               <li>{{entry}}</li>
             {% endfor %}
           </ul>
+		  <h3>Tag Cloud</h3>	
+          	{% if config.tagcloud %}
+          		{{config.tagcloud}}
+          	{% endif %}
+
         </div>
       {% endfor %}
 

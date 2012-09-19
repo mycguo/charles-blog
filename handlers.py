@@ -71,7 +71,19 @@ class AdminHandler(BaseHandler):
     }
     self.render_to_response("index.html", template_vals)
 
+class TagCloudHandler(BaseHandler):
+  def get(self):
 
+    # get all the tags to create tag cloud
+    posts = models.BlogPost.all().order('-published')    
+    my_text= ' '
+    for post in posts:
+        mytags = ' '.join(post.tags)
+        my_text += mytags
+        
+    logging.info("my tags are: " + my_text)
+    self.response.out.write(my_text)
+    
 class PostHandler(BaseHandler):
   def render_form(self, form):
     self.render_to_response("edit.html", {'form': form})

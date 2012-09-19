@@ -1,0 +1,23 @@
+		a.tag{
+			font-family: 'PTSans';
+			text-decoration: none;			
+		}
+		
+		li.cnt{
+			overflow: hidden;
+		    position: absolute;
+			display: block;	
+		}
+		
+		ul.cloud{
+			position: relative;
+			display: block;
+			width: 219px;
+			height: 179.4px;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		a.c3{color:#303133;}        a.c3:hover{color:#434447;}a.c2{color:#ccc794;}        a.c2:hover{color:#f9f8f3;}a.c0{color:#99917c;}        a.c0:hover{color:#c9c5ba;}a.c6{color:#e56a00;}        a.c6:hover{color:#ff9941;}a.c4{color:#585956;}        a.c4:hover{color:#7b7c78;}
