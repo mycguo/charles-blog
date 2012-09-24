@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "basehtml5.html" %}
 {% block menu %}
   <li{% ifequal handler_class "AdminHandler" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/admin/posts">Posts</a></li>
   <li{% ifequal handler_class "PageAdminHandler" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/admin/pages">Pages</a></li>
