@@ -34,7 +34,8 @@ sidebars = [
   ('Blogroll', [
     '<a href="http://charles-blog.appspot.com/">Charles Guo</a>',   
     '<a href="http://www.tridionarchitect.com/tridion/tridion-blogs.aspx">Tridion Architect</a>',
-    '<a href="http://www.tridiondeveloper.com/">Tridion Developer</a>',        
+    '<a href="http://www.tridiondeveloper.com/">Tridion Developer</a>', 
+    '<a href="http://blog.building-blocks.com/">Building Blocks</a>',       
     '<a href="http://blog.notdot.net/">Nick Johnsonz</a>',
     '<a href="http://www.codinghorror.com/blog/">Coding Horror</a>',
     '<a href="http://nunolinhares.blogspot.com/">Nuno Linhares</a>',
