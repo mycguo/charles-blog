@@ -2,7 +2,7 @@
 blog_name = 'Charles\'s Blog'
 
 # Your name (used for copyright info)
-author_name = 'Charles Guo'
+author_name = '<a href="mailto:mycguo@gmail.com">Charles Guo</a>'
 
 # (Optional) slogan
 slogan = 'Keep Learning'
