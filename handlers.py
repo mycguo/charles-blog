@@ -18,7 +18,7 @@ from google.appengine.ext.db import djangoforms
 class PostForm(djangoforms.ModelForm):
   title = forms.CharField(widget=forms.TextInput(attrs={'id':'name'}))
   body = forms.CharField(widget=forms.Textarea(attrs={
-      'id':'message',
+      'id':'editorHtml',
       'rows': 10,
       'cols': 20}))
   body_markup = forms.ChoiceField(

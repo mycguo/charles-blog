@@ -28,9 +28,21 @@ handlers:
   script: admin.py
   login: admin
 
+- url: /static/images/fileicons/.*
+  script: zip_handler.py
+
+- url: /static/js/plugins
+  static_dir: staticfck/js/plugins
+  
 - url: /static/([^/]+)/(.*)
   static_files: themes/\1/static/\2
   upload: themes/[^/]+/static/.*
+    
+- url: /fckeditor/.*
+  script: zip_handler.py
+  
+- url: /staticfck
+  static_dir: staticfck
 
 - url: /.*
   script: static.py
