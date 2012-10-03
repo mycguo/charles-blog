@@ -1,5 +1,94 @@
 {% extends "admin/base.html" %}
 {% block title %}{% if form.instance %}Edit{% else %}New{% endif %} Post{% endblock %}
+  {% block editor %} 
+  <script type="text/javascript" src="/fckeditor/fckeditor.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.2.0/dojo/dojo.xd.js" djConfig="parseOnLoad:true,isDebug:false"></script>
+  <script type="text/javascript">
+    dojo.require('dijit.layout.ContentPane');
+    dojo.require('dijit.layout.TabContainer');
+    dojo.require('dijit.form.Button');
+  </script>
+  <script type="text/javascript">
+    /**
+     * Parses the arguments out of the URL
+     * @return {Object} A dictionary of key/value pairs of the arguments
+     */
+    function getArgs() {
+      var args = {};
+      var nvPairs = document.location.search.slice(1).split('&');
+
+      for (var i = 0, param; param = nvPairs[i]; i++) {
+        var nvPair = param.split("=");
+        var name = unescape(nvPair[0]);
+        var value = unescape(nvPair[1]);
+        args[name] = value;
+      }
+      return args;
+    }
+
+    /**
+     * Sets the body to be visible.  Called onload.
+     */
+    function showBody() {
+      dojo.style(dojo.body(), "visibility", "visible");
+    }
+
+    /**
+     * Selects a tab based on the fragement selected by #.
+     */
+    function selectTab() {
+      var mainTabs = dijit.byId('mainTabs');
+      var tabName = document.location.hash.replace(/^#/,'');
+      tabName += 'Tab';
+      var tabToSelect = dijit.byId(tabName);
+
+      if (tabToSelect) {
+        mainTabs.selectChild(tabToSelect);
+      }
+    }
+
+    /**
+     * Determines if a message should be displayed based on the m parameter in
+     * the URL.  This parameter is the id of the div containing the message.
+     * The method edits the div by wrapping its contents with five span tags
+     * which are needed by the CSS, making it visible, and setting up a fade-out
+     * animation.
+     */
+    function showMessage() {
+      var args = getArgs();
+      var message_id = args['m'];
+      if (message_id) {
+        var message = dojo.byId(message_id);
+        var messageSpan = dojo.doc.createElement('span');
+        messageSpan.innerHTML = message.innerHTML;
+        for (var i = 0; i < 4; i++) {
+          var newSpan = dojo.doc.createElement('span');
+          newSpan.appendChild(messageSpan);
+          messageSpan = newSpan;
+        }
+        message.innerHTML = '';
+        message.appendChild(messageSpan);
+        dojo.addClass(message, 'message');
+        message.style.visibility = 'visible';
+        dojo.fadeOut({node: message_id, duration: 2000, delay:10000}).play()
+      }
+    }
+    
+    function createEditor() {
+      var oFCKeditor = new FCKeditor('editorHtml');
+      oFCKeditor.BasePath = "/fckeditor/";
+      oFCKeditor.Config["CustomConfigurationsPath"] = "/staticfck/js/fck_config.js";
+      oFCKeditor.Height = 328;
+      oFCKeditor.ToolbarSet = 'AESC_Toolbar';
+      oFCKeditor.ReplaceTextarea();
+    }
+
+    dojo.addOnLoad(selectTab);
+    dojo.addOnLoad(showMessage);
+    dojo.addOnLoad(createEditor);
+    dojo.addOnLoad(showBody);
+  </script>
+{% endblock %}
 {% block body %}
   <h2>{% if form.instance %}Edit{% else %}New{% endif %} Page</h2>
   <form method="post" action="">
