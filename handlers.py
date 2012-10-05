@@ -156,7 +156,7 @@ class PageForm(djangoforms.ModelForm):
   title = forms.CharField(widget=forms.TextInput(attrs={'id':'title'}))
   template = forms.ChoiceField(choices=config.page_templates.items())
   body = forms.CharField(widget=forms.Textarea(attrs={
-      'id':'body',
+      'id':'editorHtml',
       'rows': 10,
       'cols': 20}))
   class Meta:
