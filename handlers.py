@@ -79,7 +79,7 @@ class TagCloudHandler(BaseHandler):
     my_text= ' '
     for post in posts:
         mytags = ' '.join(post.tags)
-        my_text += mytags
+        my_text += mytags + ' '
         
     logging.info("my tags are: " + my_text)
     self.response.out.write(my_text)
