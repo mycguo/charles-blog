@@ -39,7 +39,9 @@ sidebars = [
     '<a href="http://blog.notdot.net/">Nick Johnsonz</a>',
     '<a href="http://www.codinghorror.com/blog/">Coding Horror</a>',
     '<a href="http://nunolinhares.blogspot.com/">Nuno Linhares</a>',
-    '<a href="http://www.schneier.com/blog/">Schneier on Security</a>',
+    '<a href="http://www.dominic.cronin.nl/weblog">Dominic Cronin</a>',
+    '<a href="http://jaimesantosalcon.blogspot.com/?view=sidebar">Jaime\'s Idea</a>',
+    
   ]),
 ]
 
