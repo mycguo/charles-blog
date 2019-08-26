@@ -1,4 +1,4 @@
-charles-blog
+charles blog software
 ============
 
 Blog using Python
